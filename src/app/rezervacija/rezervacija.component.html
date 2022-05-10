@@ -1,0 +1,13 @@
+<p>
+  rezervacija works!
+</p>
+<button (click)="incKlik()">Kliknite ovdje</button>
+<p>Broj klikova {{ klikovi }}</p>
+{{predavanje}}
+
+<div *ngFor="let rezervacija of listaRezervacija">
+<span>Datum od: {{rezervacija.datum_od}}</span>
+<br>
+<span>Datum do: {{rezervacija.datum_do}}</span>
+<br>
+</div>

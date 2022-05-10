@@ -1,0 +1,12 @@
+<div>
+  <button *ngIf="!showAddDrzavu" (click)="showAddDrzavu = true">Dodaj novo</button>
+  <div *ngIf="showAddDrzavu">
+     <input type="text" id="drzava" name="drzava" placeholder="Naziv drzave" [(ngModel)]="drzava">
+    <button (click)="showAddDrzavu = false">Zatvori</button>
+    <button (click)="dodajDrzavu()">Dodaj</button>
+  </div>
+  <p *ngFor="let drzava of listDrzava">
+  <span>{{drzava.id}}</span>
+  <span>{{drzava.naziv}}</span>
+  </p>
+</div>
